@@ -1,5 +1,5 @@
 [task]
-name = "grid-resilience-bess-decision-task"
+name = "artasyaskar/grid-resilience-bess-decision-task"
 
 [environment]
 allow_internet = false
