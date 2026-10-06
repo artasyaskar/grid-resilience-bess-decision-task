@@ -2,233 +2,225 @@
   {
     "item": 1,
     "weight": 10,
-    "criterion": "The file output/decision_summary.json specifies 'recommended_region' matching the computed data-derived optimal balancing authority ('REGION_B_ERCOT_CENTRAL').",
     "category": "recommend",
     "verification_type": "text",
-    "grades_output_files": ["output/decision_summary.json"]
+    "grades_output_files": ["output/decision_summary.json"],
+    "criterion": "The file output/decision_summary.json specifies recommended_region matching the data-derived optimal balancing authority (REGION_B_ERCOT_CENTRAL)."
   },
   {
     "item": 2,
     "weight": 10,
-    "criterion": "The file output/decision_summary.json specifies 'recommended_technology' matching the computed optimal BESS configuration ('LFP-200-800').",
     "category": "recommend",
     "verification_type": "text",
-    "grades_output_files": ["output/decision_summary.json"]
+    "grades_output_files": ["output/decision_summary.json"],
+    "criterion": "The file output/decision_summary.json specifies recommended_technology matching the optimal BESS configuration (LFP-200-800)."
   },
   {
     "item": 3,
     "weight": 10,
-    "criterion": "The investment recommendation is consistent across both deliverables, with output/decision_memo.md and output/decision_summary.json explicitly selecting REGION_B_ERCOT_CENTRAL and LFP-200-800.",
     "category": "recommend",
     "verification_type": "text",
-    "grades_output_files": ["output/decision_summary.json", "output/decision_memo.md"]
+    "grades_output_files": ["output/decision_summary.json", "output/decision_memo.md"],
+    "criterion": "The investment recommendation is consistent across deliverables, with output/decision_memo.md and output/decision_summary.json selecting REGION_B_ERCOT_CENTRAL and LFP-200-800."
   },
   {
     "item": 4,
-    "weight": 5,
-    "criterion": "The file output/decision_summary.json reports 'effective_firm_capacity_mw' within +/- 2.5 MW of the data-derived value (189.81 MW) calculated over the top 50 regional deficit hours.",
-    "category": "analyze",
+    "weight": 3,
+    "category": "explore",
     "verification_type": "text",
-    "grades_output_files": ["output/decision_summary.json"]
+    "grades_output_files": ["output/decision_summary.json"],
+    "criterion": "The file output/decision_summary.json includes rejected_regions auditing all three non-selected regions: REGION_A_MISO_SOUTH, REGION_C_CAISO_SP15, and REGION_D_SPP_WEST."
   },
   {
     "item": 5,
-    "weight": 5,
-    "criterion": "The file output/decision_summary.json reports 'annual_avoided_unserved_energy_mwh' within +/- 5% of the data-derived value (188,968.0 MWh) from the 8,760-hour dispatch simulation.",
-    "category": "analyze",
+    "weight": 3,
+    "category": "explore",
     "verification_type": "text",
-    "grades_output_files": ["output/decision_summary.json"]
+    "grades_output_files": ["output/decision_memo.md"],
+    "criterion": "The file output/decision_memo.md explores candidate storage configurations across LFP, NMC, and flow chemistries with rated durations from 2 to 8 hours."
   },
   {
     "item": 6,
-    "weight": 5,
-    "criterion": "The file output/decision_summary.json reports 'net_annual_resilience_value_usd' within +/- 5% of the data-derived value ($1,653,136,610.60) based on regional VOLL ($9,000/MWh) and annualized lifecycle costs.",
-    "category": "analyze",
+    "weight": 3,
+    "category": "hypothesize",
     "verification_type": "text",
-    "grades_output_files": ["output/decision_summary.json"]
+    "grades_output_files": ["output/decision_memo.md"],
+    "criterion": "The file output/decision_memo.md hypothesizes that high gross demand or solar curtailment does not drive loss-of-load vulnerability without evaluating transmission ties."
   },
   {
     "item": 7,
     "weight": 3,
-    "criterion": "The recommended installation satisfies regional substation interconnection limits, verifying that the 200 MW nameplate capacity does not exceed the 250 MW headroom at Gillespie 345kV.",
-    "category": "analyze",
+    "category": "hypothesize",
     "verification_type": "text",
-    "grades_output_files": ["output/decision_summary.json"]
+    "grades_output_files": ["output/decision_memo.md"],
+    "criterion": "The file output/decision_memo.md evaluates the hypothesis that ambient summer heatwaves above 35°C induce acute capacity de-rating and reserve margin deficits."
   },
   {
     "item": 8,
-    "weight": 3,
-    "criterion": "The analysis in output/decision_memo.md applies the mandated 5.0% operating reserve margin requirement when calculating hourly grid supply deficits.",
+    "weight": 4,
     "category": "analyze",
     "verification_type": "text",
-    "grades_output_files": ["output/decision_memo.md"]
+    "grades_output_files": ["output/decision_summary.json"],
+    "criterion": "The file output/decision_summary.json reports effective_firm_capacity_mw within +/- 2.5 MW of the data-derived value (189.81 MW) across top 50 deficit hours."
   },
   {
     "item": 9,
-    "weight": 3,
-    "criterion": "The file output/decision_memo.md evaluates ambient temperatures exceeding 35.0°C and applies thermal capacity de-rating during summer peak stress hours.",
+    "weight": 4,
     "category": "analyze",
     "verification_type": "text",
-    "grades_output_files": ["output/decision_memo.md"]
+    "grades_output_files": ["output/decision_summary.json"],
+    "criterion": "The file output/decision_summary.json reports annual_avoided_unserved_energy_mwh within +/- 5% of the data-derived value (188,968.0 MWh)."
   },
   {
     "item": 10,
     "weight": 4,
-    "criterion": "The file output/decision_summary.json specifies 'settlement_records_used' as 'FINAL' in 'data_integrity_notes', filtering out preliminary telemetry.",
     "category": "analyze",
     "verification_type": "text",
-    "grades_output_files": ["output/decision_summary.json"]
+    "grades_output_files": ["output/decision_summary.json"],
+    "criterion": "The file output/decision_summary.json reports net_annual_resilience_value_usd within +/- 5% of the data-derived value ($1,653,136,610.60)."
   },
   {
     "item": 11,
     "weight": 4,
-    "criterion": "The file output/decision_summary.json specifies 'timezone_normalization' as 'UTC' in 'data_integrity_notes', correctly harmonizing operational and meteorological time series.",
     "category": "analyze",
     "verification_type": "text",
-    "grades_output_files": ["output/decision_summary.json"]
+    "grades_output_files": ["output/decision_summary.json"],
+    "criterion": "The recommended asset satisfies regional substation limits, verifying that 200 MW nameplate capacity does not exceed the 250 MW headroom at Gillespie 345kV."
   },
   {
     "item": 12,
     "weight": 3,
-    "criterion": "The file output/decision_memo.md explicitly documents data integrity protocols in Section 6, detailing the filtering of final settlement records and UTC normalization.",
-    "category": "synthesize",
+    "category": "analyze",
     "verification_type": "text",
-    "grades_output_files": ["output/decision_memo.md"]
+    "grades_output_files": ["output/decision_memo.md"],
+    "criterion": "The file output/decision_memo.md applies the mandated 5.0% operating reserve margin requirement when calculating hourly grid supply deficits."
   },
   {
     "item": 13,
-    "weight": 2,
-    "criterion": "The file output/decision_summary.json reports 'power_capacity_mw' as 200 or 200.0.",
-    "category": "instruction_following",
+    "weight": 3,
+    "category": "analyze",
     "verification_type": "text",
-    "grades_output_files": ["output/decision_summary.json"]
+    "grades_output_files": ["output/decision_memo.md"],
+    "criterion": "The file output/decision_memo.md evaluates ambient temperatures exceeding 35.0°C and applies thermal capacity de-rating during summer peak stress hours."
   },
   {
     "item": 14,
-    "weight": 2,
-    "criterion": "The file output/decision_summary.json reports 'energy_capacity_mwh' as 800 or 800.0.",
-    "category": "instruction_following",
+    "weight": 4,
+    "category": "analyze",
     "verification_type": "text",
-    "grades_output_files": ["output/decision_summary.json"]
+    "grades_output_files": ["output/decision_summary.json"],
+    "criterion": "The file output/decision_summary.json specifies settlement_records_used as FINAL in data_integrity_notes, filtering out preliminary telemetry."
   },
   {
     "item": 15,
-    "weight": 2,
-    "criterion": "The file output/decision_summary.json reports 'storage_duration_hours' as 4 or 4.0.",
-    "category": "instruction_following",
+    "weight": 4,
+    "category": "analyze",
     "verification_type": "text",
-    "grades_output_files": ["output/decision_summary.json"]
+    "grades_output_files": ["output/decision_summary.json"],
+    "criterion": "The file output/decision_summary.json specifies timezone_normalization as UTC in data_integrity_notes, correctly harmonizing time series."
   },
   {
     "item": 16,
     "weight": 3,
-    "criterion": "The file output/decision_summary.json includes 'rejected_regions' containing audited entries for all three non-selected regions: REGION_A_MISO_SOUTH, REGION_C_CAISO_SP15, and REGION_D_SPP_WEST.",
-    "category": "explore",
+    "category": "analyze",
     "verification_type": "text",
-    "grades_output_files": ["output/decision_summary.json"]
+    "grades_output_files": ["output/decision_memo.md"],
+    "criterion": "The file output/decision_memo.md identifies that REGION_C_CAISO_SP15 is constrained by a 180 MW substation headroom limit, disqualifying 200 MW configurations."
   },
   {
     "item": 17,
     "weight": 3,
-    "criterion": "The file output/decision_memo.md identifies that REGION_C_CAISO_SP15 is constrained by a 180 MW substation interconnection headroom limit at Redondo Beach, legally disqualifying 200 MW configurations.",
     "category": "analyze",
     "verification_type": "text",
-    "grades_output_files": ["output/decision_memo.md"]
+    "grades_output_files": ["output/decision_memo.md"],
+    "criterion": "The file output/decision_memo.md explains that REGION_D_SPP_WEST experiences only 58 deficit hours, resulting in negative net annual resilience value."
   },
   {
     "item": 18,
-    "weight": 2,
-    "criterion": "The file output/decision_memo.md explains that REGION_A_MISO_SOUTH has a lower statutory Value of Lost Load ($3,500/MWh), yielding substantially lower annual resilience value ($630.88M) than ERCOT.",
+    "weight": 4,
     "category": "synthesize",
     "verification_type": "text",
-    "grades_output_files": ["output/decision_memo.md"]
+    "grades_output_files": ["output/decision_memo.md"],
+    "criterion": "The file output/decision_memo.md applies Section 3.5 tie-breaker rules to select LFP over NMC for higher accredited firm capacity under extreme heat."
   },
   {
     "item": 19,
-    "weight": 2,
-    "criterion": "The file output/decision_memo.md explains that REGION_D_SPP_WEST experiences only 58 deficit hours, resulting in negative net annual resilience value (-$9.77M).",
+    "weight": 4,
     "category": "synthesize",
     "verification_type": "text",
-    "grades_output_files": ["output/decision_memo.md"]
+    "grades_output_files": ["output/decision_memo.md"],
+    "criterion": "The file output/decision_memo.md explains that REGION_A_MISO_SOUTH has a lower statutory VOLL ($3,500/MWh), yielding substantially lower resilience monetization than ERCOT."
   },
   {
     "item": 20,
-    "weight": 2,
-    "criterion": "The file output/decision_memo.md evaluates NMC vs. LFP thermal de-rating (1.5%/°C vs 0.8%/°C) and applies the Section 3.5 tie-breaker rule to select LFP for higher firm capacity under heat.",
-    "category": "analyze",
+    "weight": 3,
+    "category": "synthesize",
     "verification_type": "text",
-    "grades_output_files": ["output/decision_memo.md"]
+    "grades_output_files": ["output/decision_memo.md"],
+    "criterion": "The file output/decision_memo.md includes comparative quantitative tables contrasting all 4 candidate regions and candidate battery configurations."
   },
   {
     "item": 21,
-    "weight": 0,
-    "criterion": "The output directory output/ exists and is accessible.",
-    "category": "instruction_following",
-    "verification_type": "file_structure",
-    "grades_output_files": ["output"]
+    "weight": 3,
+    "category": "synthesize",
+    "verification_type": "text",
+    "grades_output_files": ["output/decision_memo.md"],
+    "criterion": "The file output/decision_memo.md explicitly documents data integrity protocols in Section 6, detailing the filtering of final settlement records and UTC normalization."
   },
   {
     "item": 22,
-    "weight": 2,
-    "criterion": "The deliverable file output/decision_summary.json exists and is non-empty.",
+    "weight": 1,
     "category": "instruction_following",
     "verification_type": "file_structure",
-    "grades_output_files": ["output/decision_summary.json"]
+    "grades_output_files": ["output/decision_memo.md"],
+    "criterion": "The deliverable file output/decision_memo.md exists and is non-empty."
   },
   {
     "item": 23,
-    "weight": 2,
-    "criterion": "The deliverable file output/decision_summary.json contains syntactically valid JSON.",
+    "weight": 1,
     "category": "instruction_following",
     "verification_type": "file_structure",
-    "grades_output_files": ["output/decision_summary.json"]
+    "grades_output_files": ["output/decision_summary.json"],
+    "criterion": "The deliverable file output/decision_summary.json exists and contains syntactically valid JSON."
   },
   {
     "item": 24,
     "weight": 2,
-    "criterion": "The deliverable file output/decision_memo.md exists and is non-empty.",
     "category": "instruction_following",
-    "verification_type": "file_structure",
-    "grades_output_files": ["output/decision_memo.md"]
+    "verification_type": "text",
+    "grades_output_files": ["output/decision_memo.md"],
+    "criterion": "The file output/decision_memo.md contains all 6 required section headings including Executive Decision Memorandum and Sections 1 through 6."
   },
   {
     "item": 25,
-    "weight": 3,
-    "criterion": "The file output/decision_memo.md contains all required section headings including Executive Decision Memorandum and Sections 1 through 6.",
+    "weight": 1,
     "category": "instruction_following",
     "verification_type": "text",
-    "grades_output_files": ["output/decision_memo.md"]
+    "grades_output_files": ["output/decision_memo.md"],
+    "criterion": "The file output/decision_memo.md contains no placeholder tokens including TODO, TBD, or [Insert."
   },
   {
     "item": 26,
-    "weight": 2,
-    "criterion": "The file output/decision_memo.md contains no placeholder tokens such as TODO, TBD, or [Insert.",
+    "weight": 1,
     "category": "instruction_following",
     "verification_type": "text",
-    "grades_output_files": ["output/decision_memo.md"]
+    "grades_output_files": ["output/decision_memo.md"],
+    "criterion": "The file output/decision_memo.md contains substantive executive analysis of at least 400 words."
   },
   {
     "item": 27,
-    "weight": 2,
-    "criterion": "The file output/decision_memo.md contains substantive executive analysis of at least 400 words.",
+    "weight": 1,
     "category": "instruction_following",
     "verification_type": "text",
-    "grades_output_files": ["output/decision_memo.md"]
+    "grades_output_files": ["output/decision_summary.json"],
+    "criterion": "The file output/decision_summary.json reports power_capacity_mw as 200, energy_capacity_mwh as 800, and storage_duration_hours as 4."
   },
   {
     "item": 28,
-    "weight": 2,
-    "criterion": "The file output/decision_memo.md includes comparative quantitative tables with explicit engineering units (MW, MWh, $).",
+    "weight": 1,
     "category": "instruction_following",
     "verification_type": "text",
-    "grades_output_files": ["output/decision_memo.md"]
-  },
-  {
-    "item": 29,
-    "weight": 2,
-    "criterion": "The file output/decision_summary.json contains the structured field 'data_integrity_notes'.",
-    "category": "instruction_following",
-    "verification_type": "text",
-    "grades_output_files": ["output/decision_summary.json"]
+    "grades_output_files": ["output/decision_summary.json"],
+    "criterion": "The file output/decision_summary.json contains the structured metadata object data_integrity_notes."
   }
 ]
