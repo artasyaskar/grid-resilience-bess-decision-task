@@ -5,7 +5,9 @@ echo "[TEST.SH] Starting Programmatic Task Verifier..."
 
 mkdir -p /logs/verifier
 
-if [ -f "/workspace/tests/test_outputs.py" ]; then
+if [ -f "/tests/test_outputs.py" ]; then
+    python3 /tests/test_outputs.py
+elif [ -f "/workspace/tests/test_outputs.py" ]; then
     python3 /workspace/tests/test_outputs.py
 elif [ -f "./tests/test_outputs.py" ]; then
     python3 ./tests/test_outputs.py

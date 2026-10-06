@@ -3,7 +3,9 @@ set -e
 
 echo "[SOLVE.SH] Executing Reference Solution..."
 
-if [ -f "/workspace/solution/solve.py" ]; then
+if [ -f "/solution/solve.py" ]; then
+    python3 /solution/solve.py
+elif [ -f "/workspace/solution/solve.py" ]; then
     python3 /workspace/solution/solve.py
 elif [ -f "./solution/solve.py" ]; then
     python3 ./solution/solve.py

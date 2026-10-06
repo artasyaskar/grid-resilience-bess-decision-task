@@ -20,3 +20,8 @@ WORKDIR /workspace
 
 # Create output and logs directory structure
 RUN mkdir -p /workspace/output /logs/verifier
+
+# Copy environment files and data to workspace
+COPY . /workspace/environment/
+
+CMD ["/bin/bash"]

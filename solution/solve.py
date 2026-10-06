@@ -18,8 +18,11 @@ def main():
     # 1. Determine paths
     # Handle both container path (/workspace) and local testing paths
     possible_data_paths = [
+        "/workspace/environment",
         "/workspace/environment/data",
+        os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "environment")),
         os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "environment", "data")),
+        "./environment",
         "./environment/data"
     ]
     data_dir = None
