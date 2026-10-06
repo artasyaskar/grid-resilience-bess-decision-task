@@ -1,0 +1,221 @@
+{
+  "oracle": {
+    "reward": 1.0,
+    "passed": 29
+  },
+  "variants": [
+    {
+      "variant": "Variant A: Naive Timestamp Matching (Local Time)",
+      "reward": 0.49,
+      "passed": 15,
+      "total": 29,
+      "failed_tests": [
+        "test_decision_memo_word_count_sufficient",
+        "test_decision_memo_quantitative_tables",
+        "test_timezone_normalization_utc",
+        "test_memo_documents_data_integrity",
+        "test_operating_reserve_margin_deficit_rule",
+        "test_summer_peak_temperature_derating_applied",
+        "test_effective_firm_capacity_recomputed",
+        "test_annual_avoided_unserved_energy_recomputed",
+        "test_net_annual_resilience_value_recomputed",
+        "test_cross_deliverable_decision_consistency",
+        "test_rejection_caiso_headroom_constraint",
+        "test_rejection_miso_voll_economics",
+        "test_rejection_spp_minimal_deficit",
+        "test_technology_nmc_derating_comparison"
+      ]
+    },
+    {
+      "variant": "Variant B: No Revision Filtering (Includes INITIAL)",
+      "reward": 0.66,
+      "passed": 19,
+      "total": 29,
+      "failed_tests": [
+        "test_decision_memo_quantitative_tables",
+        "test_settlement_protocol_final_only",
+        "test_memo_documents_data_integrity",
+        "test_operating_reserve_margin_deficit_rule",
+        "test_summer_peak_temperature_derating_applied",
+        "test_cross_deliverable_decision_consistency",
+        "test_rejection_caiso_headroom_constraint",
+        "test_rejection_miso_voll_economics",
+        "test_rejection_spp_minimal_deficit",
+        "test_technology_nmc_derating_comparison"
+      ]
+    },
+    {
+      "variant": "Variant C: Wrong Timezone Normalization (CDT)",
+      "reward": 0.66,
+      "passed": 19,
+      "total": 29,
+      "failed_tests": [
+        "test_decision_memo_quantitative_tables",
+        "test_timezone_normalization_utc",
+        "test_memo_documents_data_integrity",
+        "test_operating_reserve_margin_deficit_rule",
+        "test_summer_peak_temperature_derating_applied",
+        "test_cross_deliverable_decision_consistency",
+        "test_rejection_caiso_headroom_constraint",
+        "test_rejection_miso_voll_economics",
+        "test_rejection_spp_minimal_deficit",
+        "test_technology_nmc_derating_comparison"
+      ]
+    },
+    {
+      "variant": "Variant D: Single-Metric Heuristic (Lowest Capex LFP-100-200)",
+      "reward": 0.34,
+      "passed": 11,
+      "total": 29,
+      "failed_tests": [
+        "test_decision_memo_word_count_sufficient",
+        "test_decision_memo_quantitative_tables",
+        "test_memo_documents_data_integrity",
+        "test_nominal_power_rating_200mw",
+        "test_nominal_energy_rating_800mwh",
+        "test_storage_duration_4hours",
+        "test_substation_headroom_compliance",
+        "test_operating_reserve_margin_deficit_rule",
+        "test_summer_peak_temperature_derating_applied",
+        "test_effective_firm_capacity_recomputed",
+        "test_annual_avoided_unserved_energy_recomputed",
+        "test_net_annual_resilience_value_recomputed",
+        "test_recommended_technology_correct",
+        "test_cross_deliverable_decision_consistency",
+        "test_rejection_caiso_headroom_constraint",
+        "test_rejection_miso_voll_economics",
+        "test_rejection_spp_minimal_deficit",
+        "test_technology_nmc_derating_comparison"
+      ]
+    },
+    {
+      "variant": "Variant E: Headroom Violation (Allocating 200MW in CAISO)",
+      "reward": 0.52,
+      "passed": 16,
+      "total": 29,
+      "failed_tests": [
+        "test_decision_memo_word_count_sufficient",
+        "test_decision_memo_quantitative_tables",
+        "test_memo_documents_data_integrity",
+        "test_substation_headroom_compliance",
+        "test_operating_reserve_margin_deficit_rule",
+        "test_summer_peak_temperature_derating_applied",
+        "test_recommended_region_correct",
+        "test_cross_deliverable_decision_consistency",
+        "test_rejected_regions_all_alternatives_audited",
+        "test_rejection_caiso_headroom_constraint",
+        "test_rejection_miso_voll_economics",
+        "test_rejection_spp_minimal_deficit",
+        "test_technology_nmc_derating_comparison"
+      ]
+    },
+    {
+      "variant": "Variant F: Ignoring Sec 3.5 Tie-Breaker (Selecting NMC-200-800)",
+      "reward": 0.53,
+      "passed": 17,
+      "total": 29,
+      "failed_tests": [
+        "test_decision_memo_word_count_sufficient",
+        "test_decision_memo_quantitative_tables",
+        "test_memo_documents_data_integrity",
+        "test_operating_reserve_margin_deficit_rule",
+        "test_summer_peak_temperature_derating_applied",
+        "test_effective_firm_capacity_recomputed",
+        "test_recommended_technology_correct",
+        "test_cross_deliverable_decision_consistency",
+        "test_rejection_caiso_headroom_constraint",
+        "test_rejection_miso_voll_economics",
+        "test_rejection_spp_minimal_deficit",
+        "test_technology_nmc_derating_comparison"
+      ]
+    },
+    {
+      "variant": "Variant G: Hardcoded Legacy Synthetic Answer",
+      "reward": 0.6,
+      "passed": 18,
+      "total": 29,
+      "failed_tests": [
+        "test_decision_memo_quantitative_tables",
+        "test_memo_documents_data_integrity",
+        "test_operating_reserve_margin_deficit_rule",
+        "test_summer_peak_temperature_derating_applied",
+        "test_annual_avoided_unserved_energy_recomputed",
+        "test_net_annual_resilience_value_recomputed",
+        "test_cross_deliverable_decision_consistency",
+        "test_rejection_caiso_headroom_constraint",
+        "test_rejection_miso_voll_economics",
+        "test_rejection_spp_minimal_deficit",
+        "test_technology_nmc_derating_comparison"
+      ]
+    },
+    {
+      "variant": "Variant H: Incomplete / Malformed Deliverables",
+      "reward": 0.14,
+      "passed": 4,
+      "total": 29,
+      "failed_tests": [
+        "test_decision_memo_exists",
+        "test_decision_memo_required_headings",
+        "test_decision_memo_no_placeholders",
+        "test_decision_memo_word_count_sufficient",
+        "test_decision_memo_quantitative_tables",
+        "test_data_integrity_notes_present",
+        "test_settlement_protocol_final_only",
+        "test_timezone_normalization_utc",
+        "test_memo_documents_data_integrity",
+        "test_nominal_power_rating_200mw",
+        "test_nominal_energy_rating_800mwh",
+        "test_storage_duration_4hours",
+        "test_substation_headroom_compliance",
+        "test_operating_reserve_margin_deficit_rule",
+        "test_summer_peak_temperature_derating_applied",
+        "test_effective_firm_capacity_recomputed",
+        "test_annual_avoided_unserved_energy_recomputed",
+        "test_net_annual_resilience_value_recomputed",
+        "test_recommended_technology_correct",
+        "test_cross_deliverable_decision_consistency",
+        "test_rejected_regions_all_alternatives_audited",
+        "test_rejection_caiso_headroom_constraint",
+        "test_rejection_miso_voll_economics",
+        "test_rejection_spp_minimal_deficit",
+        "test_technology_nmc_derating_comparison"
+      ]
+    },
+    {
+      "variant": "Variant I: NOP (Null Agent Execution)",
+      "reward": 0.0,
+      "passed": 1,
+      "total": 29,
+      "failed_tests": [
+        "test_decision_summary_exists",
+        "test_decision_summary_valid_json",
+        "test_decision_memo_exists",
+        "test_decision_memo_required_headings",
+        "test_decision_memo_no_placeholders",
+        "test_decision_memo_word_count_sufficient",
+        "test_decision_memo_quantitative_tables",
+        "test_data_integrity_notes_present",
+        "test_settlement_protocol_final_only",
+        "test_timezone_normalization_utc",
+        "test_memo_documents_data_integrity",
+        "test_nominal_power_rating_200mw",
+        "test_nominal_energy_rating_800mwh",
+        "test_storage_duration_4hours",
+        "test_substation_headroom_compliance",
+        "test_operating_reserve_margin_deficit_rule",
+        "test_summer_peak_temperature_derating_applied",
+        "test_effective_firm_capacity_recomputed",
+        "test_annual_avoided_unserved_energy_recomputed",
+        "test_net_annual_resilience_value_recomputed",
+        "test_recommended_region_correct",
+        "test_recommended_technology_correct",
+        "test_cross_deliverable_decision_consistency",
+        "test_rejected_regions_all_alternatives_audited",
+        "test_rejection_caiso_headroom_constraint",
+        "test_rejection_miso_voll_economics",
+        "test_rejection_spp_minimal_deficit",
+        "test_technology_nmc_derating_comparison"
+      ]
+    }
+  ]
+}

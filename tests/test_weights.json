@@ -1,1 +1,121 @@
-[]
+[
+  {
+    "test_name": "test_output_directory_accessible",
+    "weight": 0
+  },
+  {
+    "test_name": "test_decision_summary_exists",
+    "weight": 2
+  },
+  {
+    "test_name": "test_decision_summary_valid_json",
+    "weight": 2
+  },
+  {
+    "test_name": "test_decision_memo_exists",
+    "weight": 2
+  },
+  {
+    "test_name": "test_decision_memo_required_headings",
+    "weight": 3
+  },
+  {
+    "test_name": "test_decision_memo_no_placeholders",
+    "weight": 2
+  },
+  {
+    "test_name": "test_decision_memo_word_count_sufficient",
+    "weight": 2
+  },
+  {
+    "test_name": "test_decision_memo_quantitative_tables",
+    "weight": 2
+  },
+  {
+    "test_name": "test_data_integrity_notes_present",
+    "weight": 2
+  },
+  {
+    "test_name": "test_settlement_protocol_final_only",
+    "weight": 4
+  },
+  {
+    "test_name": "test_timezone_normalization_utc",
+    "weight": 4
+  },
+  {
+    "test_name": "test_memo_documents_data_integrity",
+    "weight": 3
+  },
+  {
+    "test_name": "test_nominal_power_rating_200mw",
+    "weight": 2
+  },
+  {
+    "test_name": "test_nominal_energy_rating_800mwh",
+    "weight": 2
+  },
+  {
+    "test_name": "test_storage_duration_4hours",
+    "weight": 2
+  },
+  {
+    "test_name": "test_substation_headroom_compliance",
+    "weight": 3
+  },
+  {
+    "test_name": "test_operating_reserve_margin_deficit_rule",
+    "weight": 3
+  },
+  {
+    "test_name": "test_summer_peak_temperature_derating_applied",
+    "weight": 3
+  },
+  {
+    "test_name": "test_effective_firm_capacity_recomputed",
+    "weight": 5
+  },
+  {
+    "test_name": "test_annual_avoided_unserved_energy_recomputed",
+    "weight": 5
+  },
+  {
+    "test_name": "test_net_annual_resilience_value_recomputed",
+    "weight": 5
+  },
+  {
+    "test_name": "test_recommended_region_correct",
+    "weight": 10,
+    "decision": true
+  },
+  {
+    "test_name": "test_recommended_technology_correct",
+    "weight": 10,
+    "decision": true
+  },
+  {
+    "test_name": "test_cross_deliverable_decision_consistency",
+    "weight": 10,
+    "decision": true
+  },
+  {
+    "test_name": "test_rejected_regions_all_alternatives_audited",
+    "weight": 3
+  },
+  {
+    "test_name": "test_rejection_caiso_headroom_constraint",
+    "weight": 3
+  },
+  {
+    "test_name": "test_rejection_miso_voll_economics",
+    "weight": 2
+  },
+  {
+    "test_name": "test_rejection_spp_minimal_deficit",
+    "weight": 2
+  },
+  {
+    "test_name": "test_technology_nmc_derating_comparison",
+    "weight": 2
+  }
+]
