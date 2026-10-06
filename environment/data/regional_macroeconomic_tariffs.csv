@@ -1,0 +1,10 @@
+region_id,county_name,state_code,commercial_retail_tariff_usd_kwh,municipal_job_tax_credit_usd_per_job,local_property_tax_rate,regional_inflation_index_2023
+REGION_A_MISO_SOUTH,East Baton Rouge,LA,0.098,1250,0.045,1.02
+REGION_A_MISO_SOUTH,Harrison County,MS,0.104,980,0.042,1.01
+REGION_B_ERCOT_CENTRAL,Travis County,TX,0.112,2100,0.052,1.05
+REGION_B_ERCOT_CENTRAL,Bexar County,TX,0.108,1850,0.048,1.04
+REGION_B_ERCOT_CENTRAL,Harris County,TX,0.115,2400,0.055,1.06
+REGION_C_CAISO_SP15,Los Angeles County,CA,0.198,3200,0.075,1.08
+REGION_C_CAISO_SP15,San Diego County,CA,0.215,3450,0.082,1.09
+REGION_D_SPP_WEST,Potter County,TX,0.089,850,0.038,1.01
+REGION_D_SPP_WEST,Ford County,KS,0.092,790,0.039,1.0

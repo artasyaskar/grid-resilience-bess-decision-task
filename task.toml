@@ -1,0 +1,19 @@
+[task]
+name = "grid-resilience-bess-decision-task"
+
+[environment]
+allow_internet = false
+gpus = 0
+cpus = 4
+memory_mb = 8192
+storage_mb = 10240
+
+[agent]
+timeout_sec = 1800
+max_turns = 30
+
+[metadata]
+difficulty = "hard"
+category = "engineering"
+source = "EIA-930, NOAA-GHCNh, NREL-ATB"
+tags = ["energy-systems", "electrical-engineering", "grid-resilience", "bess", "data-engineering", "optimization"]

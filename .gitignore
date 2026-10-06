@@ -1,0 +1,10 @@
+# Local test run outputs
+output/
+logs_verifier/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+*.zip
+.DS_Store
+Thumbs.db

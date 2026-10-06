@@ -1,0 +1,298 @@
+[
+  {
+    "item": 1,
+    "weight": 15,
+    "criterion": "The file output/decision_summary.json specifies 'recommended_region' as 'REGION_B_ERCOT_CENTRAL'.",
+    "category": "recommend",
+    "verification_type": "text",
+    "grades_output_files": ["output/decision_summary.json"]
+  },
+  {
+    "item": 2,
+    "weight": 15,
+    "criterion": "The file output/decision_summary.json specifies 'recommended_technology' as 'LFP-200-800'.",
+    "category": "recommend",
+    "verification_type": "text",
+    "grades_output_files": ["output/decision_summary.json"]
+  },
+  {
+    "item": 3,
+    "weight": 10,
+    "criterion": "The file output/decision_summary.json reports 'net_annual_resilience_value_usd' between 13500000 and 14200000.",
+    "category": "recommend",
+    "verification_type": "text",
+    "grades_output_files": ["output/decision_summary.json"]
+  },
+  {
+    "item": 4,
+    "weight": 2,
+    "criterion": "The deliverable file output/decision_memo.md exists and is non-empty.",
+    "category": "instruction_following",
+    "verification_type": "file_structure",
+    "grades_output_files": ["output/decision_memo.md"]
+  },
+  {
+    "item": 5,
+    "weight": 2,
+    "criterion": "The deliverable file output/decision_summary.json exists and contains syntactically valid JSON.",
+    "category": "instruction_following",
+    "verification_type": "file_structure",
+    "grades_output_files": ["output/decision_summary.json"]
+  },
+  {
+    "item": 6,
+    "weight": 1,
+    "criterion": "The file output/decision_memo.md contains the exact heading '# Executive Decision Memorandum: Utility-Scale BESS Regional Allocation'.",
+    "category": "instruction_following",
+    "verification_type": "text",
+    "grades_output_files": ["output/decision_memo.md"]
+  },
+  {
+    "item": 7,
+    "weight": 1,
+    "criterion": "The file output/decision_memo.md contains the exact heading '## 1. Final Investment Recommendation'.",
+    "category": "instruction_following",
+    "verification_type": "text",
+    "grades_output_files": ["output/decision_memo.md"]
+  },
+  {
+    "item": 8,
+    "weight": 1,
+    "criterion": "The file output/decision_memo.md contains the exact heading '## 2. Quantitative Regional Comparison & Multi-Factor Trade-Offs'.",
+    "category": "instruction_following",
+    "verification_type": "text",
+    "grades_output_files": ["output/decision_memo.md"]
+  },
+  {
+    "item": 9,
+    "weight": 1,
+    "criterion": "The file output/decision_memo.md contains the exact heading '## 3. Storage Technology Selection & Thermal Performance Analysis'.",
+    "category": "instruction_following",
+    "verification_type": "text",
+    "grades_output_files": ["output/decision_memo.md"]
+  },
+  {
+    "item": 10,
+    "weight": 1,
+    "criterion": "The file output/decision_memo.md contains the exact heading '## 4. Resilience Valuation & Unserved Energy Mitigation'.",
+    "category": "instruction_following",
+    "verification_type": "text",
+    "grades_output_files": ["output/decision_memo.md"]
+  },
+  {
+    "item": 11,
+    "weight": 1,
+    "criterion": "The file output/decision_memo.md contains the exact heading '## 5. Risk Analysis, Sensitivities, and Rejected Alternatives'.",
+    "category": "instruction_following",
+    "verification_type": "text",
+    "grades_output_files": ["output/decision_memo.md"]
+  },
+  {
+    "item": 12,
+    "weight": 1,
+    "criterion": "The file output/decision_summary.json contains the field 'power_capacity_mw' set to 200 or 200.0.",
+    "category": "instruction_following",
+    "verification_type": "text",
+    "grades_output_files": ["output/decision_summary.json"]
+  },
+  {
+    "item": 13,
+    "weight": 1,
+    "criterion": "The file output/decision_summary.json contains the field 'energy_capacity_mwh' set to 800 or 800.0.",
+    "category": "instruction_following",
+    "verification_type": "text",
+    "grades_output_files": ["output/decision_summary.json"]
+  },
+  {
+    "item": 14,
+    "weight": 1,
+    "criterion": "The file output/decision_summary.json contains the field 'storage_duration_hours' set to 4 or 4.0.",
+    "category": "instruction_following",
+    "verification_type": "text",
+    "grades_output_files": ["output/decision_summary.json"]
+  },
+  {
+    "item": 15,
+    "weight": 3,
+    "criterion": "The file output/decision_summary.json reports 'effective_firm_capacity_mw' between 185.0 and 192.0.",
+    "category": "analyze",
+    "verification_type": "text",
+    "grades_output_files": ["output/decision_summary.json"]
+  },
+  {
+    "item": 16,
+    "weight": 3,
+    "criterion": "The file output/decision_summary.json reports 'annual_avoided_unserved_energy_mwh' between 1300.0 and 1325.0.",
+    "category": "analyze",
+    "verification_type": "text",
+    "grades_output_files": ["output/decision_summary.json"]
+  },
+  {
+    "item": 17,
+    "weight": 3,
+    "criterion": "The file output/decision_summary.json reports 'annual_curtailment_utilized_mwh' between 50000.0 and 54000.0.",
+    "category": "analyze",
+    "verification_type": "text",
+    "grades_output_files": ["output/decision_summary.json"]
+  },
+  {
+    "item": 18,
+    "weight": 2,
+    "criterion": "The file output/decision_summary.json includes 'rejected_regions' containing an array of exactly 3 objects.",
+    "category": "explore",
+    "verification_type": "text",
+    "grades_output_files": ["output/decision_summary.json"]
+  },
+  {
+    "item": 19,
+    "weight": 2,
+    "criterion": "The file output/decision_summary.json includes rejected entries for REGION_A_MISO_SOUTH, REGION_C_CAISO_SP15, and REGION_D_SPP_WEST.",
+    "category": "explore",
+    "verification_type": "text",
+    "grades_output_files": ["output/decision_summary.json"]
+  },
+  {
+    "item": 20,
+    "weight": 1,
+    "criterion": "The file output/decision_summary.json specifies 'settlement_records_used' as 'FINAL' in 'data_integrity_notes'.",
+    "category": "analyze",
+    "verification_type": "text",
+    "grades_output_files": ["output/decision_summary.json"]
+  },
+  {
+    "item": 21,
+    "weight": 1,
+    "criterion": "The file output/decision_summary.json specifies 'timezone_normalization' as 'UTC' in 'data_integrity_notes'.",
+    "category": "analyze",
+    "verification_type": "text",
+    "grades_output_files": ["output/decision_summary.json"]
+  },
+  {
+    "item": 22,
+    "weight": 2,
+    "criterion": "The file output/decision_memo.md identifies that REGION_B_ERCOT_CENTRAL suffers unserved energy deficits during August heatwaves.",
+    "category": "analyze",
+    "verification_type": "text",
+    "grades_output_files": ["output/decision_memo.md"]
+  },
+  {
+    "item": 23,
+    "weight": 2,
+    "criterion": "The file output/decision_memo.md documents ambient temperatures in REGION_B exceeding 40°C during peak stress hours.",
+    "category": "analyze",
+    "verification_type": "text",
+    "grades_output_files": ["output/decision_memo.md"]
+  },
+  {
+    "item": 24,
+    "weight": 2,
+    "criterion": "The file output/decision_memo.md documents thermal capacity de-rating of gas peakers or batteries during ambient heat.",
+    "category": "analyze",
+    "verification_type": "text",
+    "grades_output_files": ["output/decision_memo.md"]
+  },
+  {
+    "item": 25,
+    "weight": 2,
+    "criterion": "The file output/decision_memo.md documents that NMC technology is rejected due to thermal sensitivity or de-rating above 35°C.",
+    "category": "analyze",
+    "verification_type": "text",
+    "grades_output_files": ["output/decision_memo.md"]
+  },
+  {
+    "item": 26,
+    "weight": 2,
+    "criterion": "The file output/decision_memo.md documents that 100 MW systems (LFP-100-400, NMC-100-200) cannot cover the ~195 MW peak power deficit.",
+    "category": "analyze",
+    "verification_type": "text",
+    "grades_output_files": ["output/decision_memo.md"]
+  },
+  {
+    "item": 27,
+    "weight": 2,
+    "criterion": "The file output/decision_memo.md documents that VRFB-50-500 is rejected due to 50 MW power limits or low round-trip efficiency.",
+    "category": "analyze",
+    "verification_type": "text",
+    "grades_output_files": ["output/decision_memo.md"]
+  },
+  {
+    "item": 28,
+    "weight": 2,
+    "criterion": "The file output/decision_memo.md explains that REGION_A_MISO_SOUTH has low deficit due to firm generation or 6000 MW tie-lines.",
+    "category": "synthesize",
+    "verification_type": "text",
+    "grades_output_files": ["output/decision_memo.md"]
+  },
+  {
+    "item": 29,
+    "weight": 2,
+    "criterion": "The file output/decision_memo.md explains that REGION_C_CAISO_SP15 has existing battery fleet or 7500 MW tie-lines preventing major deficit.",
+    "category": "synthesize",
+    "verification_type": "text",
+    "grades_output_files": ["output/decision_memo.md"]
+  },
+  {
+    "item": 30,
+    "weight": 2,
+    "criterion": "The file output/decision_memo.md explains that REGION_D_SPP_WEST has high wind generation or intertie exports limiting unserved energy.",
+    "category": "synthesize",
+    "verification_type": "text",
+    "grades_output_files": ["output/decision_memo.md"]
+  },
+  {
+    "item": 31,
+    "weight": 4,
+    "criterion": "The file output/decision_memo.md includes a comparative quantitative markdown table contrasting all 4 candidate regions.",
+    "category": "synthesize",
+    "verification_type": "text",
+    "grades_output_files": ["output/decision_memo.md"]
+  },
+  {
+    "item": 32,
+    "weight": 4,
+    "criterion": "The file output/decision_memo.md includes a comparative quantitative table evaluating the 4 candidate battery configurations.",
+    "category": "synthesize",
+    "verification_type": "text",
+    "grades_output_files": ["output/decision_memo.md"]
+  },
+  {
+    "item": 33,
+    "weight": 1,
+    "criterion": "The file output/decision_memo.md references the regulatory Value of Lost Load benchmark ($12,500/MWh).",
+    "category": "synthesize",
+    "verification_type": "text",
+    "grades_output_files": ["output/decision_memo.md"]
+  },
+  {
+    "item": 34,
+    "weight": 3,
+    "criterion": "The file output/decision_memo.md explicitly labels engineering units (MW, MWh, USD, or %) in quantitative tables.",
+    "category": "instruction_following",
+    "verification_type": "text",
+    "grades_output_files": ["output/decision_memo.md"]
+  },
+  {
+    "item": 35,
+    "weight": 2,
+    "criterion": "The file output/decision_memo.md contains no placeholder tokens including 'TODO', 'TBD', or '[Insert'.",
+    "category": "instruction_following",
+    "verification_type": "text",
+    "grades_output_files": ["output/decision_memo.md"]
+  },
+  {
+    "item": 36,
+    "weight": -5,
+    "criterion": "The file output/decision_memo.md contains raw python exception traces, script code dumps, or unparsed template tags.",
+    "category": "instruction_following",
+    "verification_type": "text",
+    "grades_output_files": ["output/decision_memo.md"]
+  },
+  {
+    "item": 37,
+    "weight": -5,
+    "criterion": "The file output/decision_summary.json contains fabricated region tokens outside the 4 specified candidate balancing authorities.",
+    "category": "instruction_following",
+    "verification_type": "text",
+    "grades_output_files": ["output/decision_summary.json"]
+  }
+]
