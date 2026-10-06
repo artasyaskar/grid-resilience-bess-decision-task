@@ -4,6 +4,7 @@ set -e
 echo "[TEST.SH] Starting Programmatic Task Verifier..."
 
 mkdir -p /logs/verifier
+OUTPUT_DIR="${OUTPUT_DIR:-/workspace/output}"
 
 if [ -f "/tests/test_outputs.py" ]; then
     python3 /tests/test_outputs.py
